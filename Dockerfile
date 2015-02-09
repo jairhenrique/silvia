@@ -6,6 +6,6 @@ RUN bash -c '{ exec 3<>/dev/tcp/download.newrelic.com/80; echo -en "GET /548C16B
 
 # install os dependencies
 RUN apt-get update
-RUN apt-get install -y build-essential curl wget software-properties-common libmysqlclient-dev python-setuptools python2.7 python2.7-dev  newrelic-sysmond nginx supervisor
+RUN apt-get install -y build-essential curl software-properties-common libmysqlclient-dev python-setuptools python2.7 python2.7-dev  newrelic-sysmond nginx supervisor
 RUN add-apt-repository -y ppa:nginx/stable
 RUN easy_install pip
