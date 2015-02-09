@@ -1,4 +1,4 @@
-# Silvia
+# Silvia :snake: 
 
 [Docker Hub](https://registry.hub.docker.com/u/jairhenrique/silvia/)
 
