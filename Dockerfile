@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+MAINTAINER Jair Henrique <jair.henrique@gmal.com>
+
 # add newrelic repo
 RUN echo "deb http://apt.newrelic.com/debian/ newrelic non-free" >> /etc/apt/sources.list.d/newrelic.list
 RUN bash -c '{ exec 3<>/dev/tcp/download.newrelic.com/80; echo -en "GET /548C16BF.gpg HTTP/1.1\r\nHost:download.newrelic.com\r\nConnection: close\r\n\r\n" >&3; while read a;do echo $a; done <&3; exec 3>&1; }' | awk '/BEGIN/,/END/{print}' | apt-key add -
