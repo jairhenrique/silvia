@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM python:2.7
 
 MAINTAINER Jair Henrique <jair.henrique@gmal.com>
 
@@ -10,5 +10,4 @@ RUN bash -c '{ exec 3<>/dev/tcp/nginx.org/80; echo -en "GET /keys/nginx_signing.
 
 # install os dependencies
 RUN apt-get update
-RUN apt-get install -y build-essential curl software-properties-common libmysqlclient-dev python-setuptools python2.7 python2.7-dev newrelic-sysmond nginx supervisor nginx-nr-agent
-RUN easy_install pip
+RUN apt-get install -y build-essential curl software-properties-common libmysqlclient-dev newrelic-sysmond nginx supervisor nginx-nr-agent
